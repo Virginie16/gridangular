@@ -57,3 +57,38 @@ Angular CLI does not come with an end-to-end testing framework by default. You c
 ## Additional Resources
 
 For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+
+# Dependances additionnelles
+
+npm i ag-grid-angular
+npm i ag-grid-community
+npm i bootstrap
+npm i ngx-toastr
+
+# Bootstrap :
+
+Après l'installation, tu peux inclure Bootstrap dans ton projet en modifiant le fichier angular.json. Dans la section styles, ajoute le fichier CSS de Bootstrap :
+
+"styles": [
+"node_modules/bootstrap/dist/css/bootstrap.min.css",
+"src/styles.css"
+],
+
+# ngx-toastr :
+
+    Après l'installation de ngx-toastr, tu dois également importer les modules nécessaires dans ton application Angular.
+        Dans le component qui l'utilise, ajoute l'importation :
+
+import { ToastrService } from 'ngx-toastr';
+export class component {
+constructor(private toastr: ToastrService) {}
+
+importData() {
+this.isImporting = true;
+setTimeout(() => {
+this.isImporting = false;
+this.toastr.success('Data successfully imported.');
+}, 1500);
+}
+}
+en cliquant sur le bouton "import", cela permet d'afficher des notifications (Data sucessfully imported).
