@@ -37,7 +37,6 @@ interface IRow {
       <h1>Tableau réussi !</h1>
       <hr />
       <br />
-      <!-- The AG Grid component, with Dimensions, CSS Theme, Row Data, and Column Definition -->
       <ag-grid-angular
         style="width: 100%; height: 550px;"
         [rowData]="rowData"
